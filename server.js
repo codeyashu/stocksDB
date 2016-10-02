@@ -2,13 +2,20 @@
 var express = require('express');
 var rethink = require('rethinkdbdash');
 var request = require('request');
+var expressLayouts = require('express-ejs-layouts');
 
 var app = express();
 var r = rethink();
 
+//use ejs and express layouts
+app.set('view engine','ejs');
+app.use(expressLayouts);
+
+
 //route our app
 var router = require('./app/routes');
 app.use('/',router);
+
 
 //public folder
 app.use(express.static(__dirname + '/public'));

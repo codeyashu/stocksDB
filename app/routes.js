@@ -10,10 +10,15 @@ module.exports = router;
 
 //home page
 router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '../index.html'));
+    res.render('pages/home');
 });
 
 //get quote page
 router.get('/quote', function(req, res) {
-    res.sendFile(path.join(__dirname, '../quote.html'));
+    res.render('pages/quote');
+});
+
+router.post('/quote', function(req, res){
+    
+
 });
