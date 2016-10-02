@@ -1,0 +1,50 @@
+2016-10-02T19:45:09.225831256 0.912669s notice: Recursively removing directory /home/yashas/projects/stock/rethinkdb_data/tmp
+2016-10-02T19:45:09.239708316 0.926544s notice: Initializing directory /home/yashas/projects/stock/rethinkdb_data
+2016-10-02T19:45:09.239944753 0.926780s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/yashas/projects/stock/rethinkdb_data' did not already exist or is empty.)
+2016-10-02T19:45:09.240156350 0.926991s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2016-10-02T19:45:09.248908519 0.935751s notice: Running on Linux 4.4.0-38-generic x86_64
+2016-10-02T19:45:09.249085393 0.935920s notice: Loading data from directory /home/yashas/projects/stock/rethinkdb_data
+2016-10-02T19:45:09.354077362 1.040912s info: Automatically using cache size of 2285 MB
+2016-10-02T19:45:09.356094325 1.042929s notice: Listening for intracluster connections on port 29015
+2016-10-02T19:45:09.366718499 1.053553s notice: Listening for client driver connections on port 28015
+2016-10-02T19:45:09.366986728 1.053821s notice: Listening for administrative HTTP connections on port 8080
+2016-10-02T19:45:09.366993658 1.053828s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:45:09.367005161 1.053840s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:45:09.367011288 1.053846s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:45:09.367017953 1.053854s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-10-02T19:45:09.367028700 1.053863s notice: Server ready, "yashas_notebook_hgc" 7624c54a-1336-4d0a-9ac0-6ce8c5fcf6b2
+2016-10-02T19:45:59.888742247 51.575578s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2016-10-02T19:45:59.889135840 51.575971s notice: Shutting down client connections...
+2016-10-02T19:45:59.889311841 51.576147s notice: All client connections closed.
+2016-10-02T19:45:59.889322866 51.576157s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-10-02T19:45:59.893259117 51.580095s notice: Storage engine shut down.
+2016-10-02T19:46:04.662162114 0.272808s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2016-10-02T19:46:04.672256095 0.282911s notice: Running on Linux 4.4.0-38-generic x86_64
+2016-10-02T19:46:04.672531741 0.283178s notice: Loading data from directory /home/yashas/projects/stock/rethinkdb_data
+2016-10-02T19:46:04.708590930 0.319236s info: Automatically using cache size of 2267 MB
+2016-10-02T19:46:04.709557057 0.320202s notice: Listening for intracluster connections on port 29015
+2016-10-02T19:46:04.710909701 0.321555s notice: Listening for client driver connections on port 28015
+2016-10-02T19:46:04.711092749 0.321738s notice: Listening for administrative HTTP connections on port 8080
+2016-10-02T19:46:04.711097039 0.321742s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:46:04.711102003 0.321747s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:46:04.711105471 0.321750s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T19:46:04.711109968 0.321755s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-10-02T19:46:04.711114633 0.321759s notice: Server ready, "yashas_notebook_hgc" 7624c54a-1336-4d0a-9ac0-6ce8c5fcf6b2
+2016-10-02T19:46:05.964412898 1.575059s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2016-10-02T19:46:05.970773204 1.581420s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2016-10-02T19:46:05.971026502 1.581672s notice: Shutting down client connections...
+2016-10-02T19:46:05.971390265 1.582036s notice: All client connections closed.
+2016-10-02T19:46:05.971397312 1.582042s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-10-02T19:46:05.972038134 1.582684s notice: Storage engine shut down.
+2016-10-02T20:36:59.904456169 0.578882s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2016-10-02T20:36:59.909713727 0.584143s notice: Running on Linux 4.4.0-38-generic x86_64
+2016-10-02T20:36:59.909782418 0.584208s notice: Loading data from directory /home/yashas/projects/stock/rethinkdb_data
+2016-10-02T20:36:59.936118505 0.610545s info: Automatically using cache size of 1755 MB
+2016-10-02T20:36:59.936860415 0.611286s notice: Listening for intracluster connections on port 29015
+2016-10-02T20:36:59.938017639 0.612444s notice: Listening for client driver connections on port 28015
+2016-10-02T20:36:59.938252691 0.612679s notice: Listening for administrative HTTP connections on port 8080
+2016-10-02T20:36:59.938255715 0.612682s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T20:36:59.938259495 0.612685s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T20:36:59.938262761 0.612689s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-02T20:36:59.938268620 0.612695s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-10-02T20:36:59.938273503 0.612699s notice: Server ready, "yashas_notebook_hgc" 7624c54a-1336-4d0a-9ac0-6ce8c5fcf6b2
