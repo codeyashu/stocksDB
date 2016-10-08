@@ -22,3 +22,14 @@ router.post('/quote', function(req, res){
     
 
 });
+
+//companies page
+router.get('/company', function(req,res){
+    res.render('pages/company');
+});
+
+
+//about page
+router.get('/about', function(req,res){
+    res.render('pages/about');
+});

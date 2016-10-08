@@ -39,6 +39,11 @@ request({
         if(!error && response.statusCode === 200){
           console.log("success")
           var quote = JSON.parse(subquote.substring(4));
+          var cquote = (subquote.substring(4));
+          console.log(subquote)
+          console.log(typeof subquote)
+          console.log(cquote)
+          console.log(typeof cquote)
           console.log(quote)
           console.log(typeof quote)
         }  

@@ -1,9 +1,108 @@
-body{
-    background-color:gray;
-    
+/* CSS RESET */
+*{
+    box-sizing: border-box;
 }
-.gotoquote{
-    float: none;
-    margin: 0 auto;
 
+body{
+    background: #122932;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/*  main CSS  */
+
+
+/*--header*/
+header{
+    padding: 20px 30px;
+}
+header #site-name{
+    color: #904e55;
+    font-size: 40px;
+    text-decoration: none;
+    display: inline-block;
+    width: 49%;
+    padding: 10px 15px;
+}
+
+header #main-nav{
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+header #main-nav ul{
+     list-style: none;
+     padding: 0;
+}
+header #main-nav ul li{
+    display: inline-block;
+}
+header #main-nav ul li a{
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #e8e9eb;
+    border-radius: 3px;
+    transition: 0.5s ease all;
+}
+header #main-nav ul li a:hover{
+    background: #59656f;
+}
+
+
+/*--main--*/
+
+main{
+    background: #122932;
+    color: #e8e9eb
+}
+main .hero{
+    padding: 50px 30px;
+    text-align: center;
+     
+}
+main .hero h1{
+    margin: 0;
+}
+
+main .moreinfo{
+text-align: center;
+}
+
+main .letsgo{
+    text-align: center;
+    padding: 20px 30px;
+}
+
+main .letsgo a{
+    border: #59656f;
+    border-style: solid; 
+    border-width:2px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.5s ease all;
+}
+main .letsgo a:hover{
+    background-color: #59656f;
+}
+
+
+
+/*--footer--*/
+footer{
+    position: absolute;
+    right: 0;
+    left:0;
+    bottom:0;
+    background: #122932;
+    color: #e8e9eb;
+    text-align: center;
+    padding: 20px 20px;
+}
+footer .footdes{
+    padding: 5px 5px;
 }

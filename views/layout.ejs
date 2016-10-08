@@ -15,20 +15,44 @@
 
   <body>
     <div class="container-fluid">
-      <header>  
-        <div id="title" class="navbar navbar-inverse">
-          <a href="/" class="navbar-brand text-center">Stock Database</a>
-        </div>
-      </header>
+
+    <!--header-->
+      <header id="sitehead">
+        <a id="site-name" href="/">STOCKIFY</a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="quote">GetQuotes</a></li>
+                <li><a href="company">Companies</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+
+    <!--home page-->
+
+    <%- defineContent('home') %>
+
+    <!--quote page-->
+
+    <%- defineContent('quote') %>
+
+    <!--company page-->
+
+    <%- defineContent('company') %>
+
+    <!--about page-->
+
+    <%- defineContent('about') %>
 
 
 
-
-<%- defineContent('main') %>
-<%- defineContent('mn') %>
-
-
-
+ <! footer>
+    <footer id="sitefooter">
+        <span class="footdes">All Rights Reserved!</span>
+        <span class="footdes">&copy 2016</span>
+    </footer>
 
 
     </div>
