@@ -19,6 +19,9 @@ router.get('/quote', function(req, res) {
 });
 
 router.post('/quote', function(req, res){
+    console.log(req.body.email);
+    console.log(req.body.password);
+    res.send('Awesome ' + req.body.email);
     
 
 });
