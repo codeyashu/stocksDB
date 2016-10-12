@@ -13,7 +13,7 @@ app.set('view engine','ejs');
 app.use(expressLayouts);
 
 //use bodyParser
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 //route our app
@@ -39,16 +39,41 @@ request({
     url: url + 'NASDAQ%3aGOOG',
     json: true
 },   
-    function(error, response, subquote){
+    function(error, response, quote){
         if(!error && response.statusCode === 200){
           console.log("success")
-          var quote = JSON.parse(subquote.substring(4));
-          var cquote = (subquote.substring(4));
-          console.log(subquote)
-          console.log(typeof subquote)
-          console.log(cquote)
-          console.log(typeof cquote)
-          console.log(quote)
-          console.log(typeof quote)
+          var objectquote = JSON.parse(quote.substring(4));
+          var stringquote = (quote.substring(4));
+          console.log(stringquote)
+          console.log(typeof stringquote)
+          console.log(objectquote)
+          console.log(typeof objectquote)
+        //  console.log(JSON.stringyfy(stringquote));
+          console.log(objectquote[0].id)
+          console.log(objectquote[0].t)
+          console.log(objectquote[0].t)
         }  
+      //  r.db('stocks').tableCreate('test').run()
+        //  if(err) throw err;
+          
+       //   r.db('stocks').table('company').insert({ticker:objectquote[0].t}).run()
+       //    r.db('stocks').table('company').insert({id:objectquote[0].id}).run()
+       //     if(err) throw err;
+           
+       //   })
+
+       // })
+
+       
+
+
+
+
+
+        
 })
+
+
+
+
+

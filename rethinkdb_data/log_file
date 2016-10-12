@@ -106,3 +106,30 @@
 2016-10-08T23:51:25.577716670 0.185673s notice: Server ready, "yashas_notebook_hgc" 7624c54a-1336-4d0a-9ac0-6ce8c5fcf6b2
 2016-10-08T23:51:27.095276824 1.703233s info: Table 55e12093-62d9-4e40-8379-2801fc0ce0dd: Starting a new Raft election for term 3.
 2016-10-08T23:51:27.103355267 1.711311s info: Table 55e12093-62d9-4e40-8379-2801fc0ce0dd: This server is Raft leader for term 3. Latest log index is 6.
+2016-10-12T16:00:10.195216130 0.097097s notice: Running rethinkdb 2.3.5~0xenial (GCC 5.3.1)...
+2016-10-12T16:00:10.212511104 0.114398s notice: Running on Linux 4.4.0-38-generic x86_64
+2016-10-12T16:00:10.212702966 0.114582s notice: Loading data from directory /home/yashas/projects/stock/rethinkdb_data
+2016-10-12T16:00:10.262359685 0.164239s info: Automatically using cache size of 1561 MB
+2016-10-12T16:00:10.263657519 0.165537s notice: Listening for intracluster connections on port 29015
+2016-10-12T16:00:10.283193927 0.185073s notice: Listening for client driver connections on port 28015
+2016-10-12T16:00:10.284120406 0.186000s notice: Listening for administrative HTTP connections on port 8080
+2016-10-12T16:00:10.284126447 0.186006s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-12T16:00:10.284130533 0.186010s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-12T16:00:10.284137167 0.186016s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2016-10-12T16:00:10.284140311 0.186019s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-10-12T16:00:10.284145954 0.186025s notice: Server ready, "yashas_notebook_hgc" 7624c54a-1336-4d0a-9ac0-6ce8c5fcf6b2
+2016-10-12T16:00:11.568471012 1.470352s info: Table 55e12093-62d9-4e40-8379-2801fc0ce0dd: Starting a new Raft election for term 4.
+2016-10-12T16:00:11.583675917 1.485556s info: Table 55e12093-62d9-4e40-8379-2801fc0ce0dd: This server is Raft leader for term 4. Latest log index is 9.
+2016-10-12T19:22:37.705547305 5168.611437s notice: Removing file /home/yashas/projects/stock/rethinkdb_data/55e12093-62d9-4e40-8379-2801fc0ce0dd
+2016-10-12T19:22:37.705555860 5168.611446s info: Table 55e12093-62d9-4e40-8379-2801fc0ce0dd: Deleted the table.
+2016-10-12T19:41:57.966332496 6328.390052s info: Table ef442f43-6760-461c-ae54-6019cbb89445: Starting a new Raft election for term 1.
+2016-10-12T19:41:57.966995691 6328.390715s info: Table ef442f43-6760-461c-ae54-6019cbb89445: Added replica on this server.
+2016-10-12T19:41:57.973464992 6328.397185s info: Table ef442f43-6760-461c-ae54-6019cbb89445: This server is Raft leader for term 1. Latest log index is 0.
+2016-10-12T19:43:07.979193926 6398.402913s info: Table b456ea6b-263d-4740-b6ae-e7e8cd20630d: Starting a new Raft election for term 1.
+2016-10-12T19:43:07.979507789 6398.403227s info: Table b456ea6b-263d-4740-b6ae-e7e8cd20630d: Added replica on this server.
+2016-10-12T19:43:07.990766321 6398.414485s info: Table b456ea6b-263d-4740-b6ae-e7e8cd20630d: This server is Raft leader for term 1. Latest log index is 0.
+2016-10-12T20:18:31.466717702 8521.890437s notice: Removing file /home/yashas/projects/stock/rethinkdb_data/ef442f43-6760-461c-ae54-6019cbb89445
+2016-10-12T20:18:31.466724237 8521.890443s info: Table ef442f43-6760-461c-ae54-6019cbb89445: Deleted the table.
+2016-10-12T20:18:43.021872883 8533.445593s info: Table eb54ae81-572f-493b-8ecf-866b5cc77f39: Added replica on this server.
+2016-10-12T20:18:43.022142420 8533.445862s info: Table eb54ae81-572f-493b-8ecf-866b5cc77f39: Starting a new Raft election for term 1.
+2016-10-12T20:18:43.037204395 8533.460924s info: Table eb54ae81-572f-493b-8ecf-866b5cc77f39: This server is Raft leader for term 1. Latest log index is 0.
