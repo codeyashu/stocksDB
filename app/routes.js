@@ -55,6 +55,7 @@ router.get('/company', function(req,res){
 });
 
 
+
 //--about page--//
 router.get('/about', function(req,res){
     res.render('pages/about');
