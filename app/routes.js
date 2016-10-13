@@ -31,27 +31,27 @@ router.post('/quote', function(req, res){
 
 
 //--companies page--//
-var clist = {};
+
 var len;
 router.get('/company', function(req,res){
 
     //query to get companies list 
     r.table('company').pluck('name').run()
     .then(function(response){
-       clist = Object.assign({}, response)
-      // clist = response;
+      //number of companies
+      len = Object.keys(response).length;
+
+      console.log('companies passed!')  
+
+      //render page
+      res.render('pages/company', {
+        clist: response,
+        x:len
+      });
     })
     .error(function(err){
-	console.log(err);
-    })
-    //number of companies
-    len = Object.keys(clist).length;
-
-     console.log('companies passed!')  
-    res.render('pages/company', {
-        clist: clist,
-        x:len
-    });
+	   console.log(err);
+    })   
 });
 
 
