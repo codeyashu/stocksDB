@@ -9,28 +9,19 @@
   <div class="head">
     List of supported Companies!
   </div>
-  <div class="list">
+
+  <div class = "list">
     <ul>
-        <li>Apple</li>
-        <li>Idea</li>
-        <li>Microsoft</li>
-        <li>Facebook</li>
-        <li>Airtel</li>
-        <li>Reliance</li>
-        <li>Toyota</li>
-        <li>General Motors</li>
-        <li>more</li>
-        <li>Volkswagon</li>
-        <li>more</li>
-        <li> more</li>
+       <%for(var i=0;i<x;i++){ %>
+        <li>  <h4><%= clist[i].name %></h4> </li>
+      <% } %>
+
     </ul>
-    </div>
+
+  </div>
 
   <div class="tail">
     More coming soon!
   </div>
-
-  </companylist>
-
   
-</div>
+  </companylist>

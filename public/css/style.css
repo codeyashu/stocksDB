@@ -116,6 +116,7 @@ companylist{
     color: #f1e0c5;
 }
 
+
 companylist .head{
     text-align: center;
     padding: 30px 30px;
@@ -123,8 +124,8 @@ companylist .head{
 
 companylist .list{
     border: 2px solid wheat;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 companylist .list ul{
      text-align: center;
@@ -133,6 +134,7 @@ companylist .list ul{
     list-style: none;
 }
 
+
 companylist .tail{
     text-align: center;
     padding: 30px 30px;
@@ -140,8 +142,9 @@ companylist .tail{
 }
 
 
+
+
 /*--about--*/
 about{
     font-size: 90px;
-
-}
+    }
