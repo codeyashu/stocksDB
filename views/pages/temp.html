@@ -19,3 +19,51 @@
     <% drinks.forEach(function(drink){ %>
       <li><%= drink.name %> - <%= drink.drunkness %></li>
   <% }); %> 
+
+
+<li><a href="#">Microsoft</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Reliance</a></li>
+        <li><a href="#">Airtel</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Apple</a></li>
+
+///list dropdown
+
+     <div class="dropdown">
+      <button id="dropdown1" class="btn btn-defult dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Select Company
+      <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown1">
+      <%for(var i = 0; i<x; i++) {%>
+        <li><a href="#"> <%= clist[i].name %></a></li>      
+    <% } %>
+    </ul>
+    </div>
+
+
+
+/dropdown formmmmmmmmmm
+   <form action="/quote" method="POST">
+<div class="dropdown">
+      <button id="dropdownclist" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+      Select Company
+      <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownclist">
+      <%for(var i = 0; i<x; i++) {%>
+        <li><a href="#"> <%= clist[i].name %></a></li>      
+    <% } %>
+    </ul>
+
+    <button type="submit" class="btn btn-success">submit</button>
+  </div>
+
+</form>
+
+
+//buttonsss

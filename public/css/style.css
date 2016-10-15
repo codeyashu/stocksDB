@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     background: #122932;
     margin:0;
@@ -108,6 +109,12 @@ main .letsgo a:hover{
 
 /*--quotes*/
 
+quote .selectcompanytext{
+    color: white;
+}
+label{
+    color: white;
+}
 
 
 
