@@ -8,8 +8,10 @@ var r = require('rethinkdbdash')({
 var expressLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
 
-var app = express();
+var app = module.exports = express();
 
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 //use ejs and express layouts
 app.set('view engine','ejs');
@@ -18,12 +20,35 @@ app.use(expressLayouts);
 //use bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
+
+//socket
+io.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
+
+
+/*
+
+r.table('company').changes().run()
+.then(function(cursor){
+    cursor.each(console.log);
+})
+.error(function(err){
+    console.log(err);
+})
+
+*/
+
 //details.js
 var details = require('./app/details');
 
 //route our app
 var router = require('./app/routes');
 app.use('/',router);
+
 
 //public folder
 app.use(express.static(__dirname + '/public'));

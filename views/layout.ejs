@@ -38,10 +38,9 @@
 
     <%- defineContent('quote') %>
 
-     <!--quote page-->
+     <!--company details-->
 
     <%- defineContent('cdetail') %>
-
 
 
     <!--company page-->
@@ -64,6 +63,14 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+         var socket = io.connect('http://localhost:3000');
+         socket.on('news', function (data) {
+           console.log(data);
+           socket.emit('my other event', { my: 'data' });
+        });
+</script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>    
   </body>

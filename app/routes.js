@@ -8,28 +8,38 @@ var r = require('rethinkdbdash')({
   db: 'stocks'
 });
 
+
+//query module
+var query = require('./query')
+var app = require('../server');
+
+// middleware to populate clist & clen
+app.use(function(req, res, next){
+   query.companyList(function(err, data){
+      if(!err) {
+         req.clist = data.clist;
+         req.clen = data.clen;
+      }
+      next();
+   });
+});
+
+query.companyList(function(err, data){
+      if(err) {
+         console.log(err);
+      } else {
+         console.log(data.clist[0].id);
+         console.dir(data.clist);
+      }
+});
+
+
+
 //create router object
 var router = express.Router();
 
 //export router
 module.exports = router;
-
-
-
-//get company id and names
-var len;
-var clist = {};
-//query to get companies list 
-r.table('company').pluck('id','name').orderBy('name').run()
-  .then(function(response){
-     clist = response;
-      //number of companies
-     len = Object.keys(clist).length;
-  })
- .error(function(err){
-    console.log(err);
- })   
-
 
 //home page
 router.get('/', function(req, res) {
@@ -40,11 +50,11 @@ router.get('/', function(req, res) {
 
 //--companies page--//
 router.get('/company', function(req,res){  
-      console.log('served companies page')
-      res.render('pages/company', {
-        clist: clist,
-        x:len
-      }); 
+    console.log('served companies page')
+    res.render('pages/company', {
+      clist: req.clist,
+      x: req.clen
+    }); 
 });
 
 
@@ -59,10 +69,10 @@ router.get('/about', function(req,res){
 
 var selectedc;
 router.get('/quote', function(req, res) {
-    console.log('served getquotespage')
+    console.log('served getquotes page')
     res.render('pages/quote',{
-        clist: clist,
-        x:len
+        clist: req.clist,
+        x: req.clen
     });
 });
 
