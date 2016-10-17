@@ -8,7 +8,6 @@ var r = require('rethinkdbdash')({
 });
 
 
-
 //query to get companies list 
 exports.companyList = function(next){
     r.table('company').run()

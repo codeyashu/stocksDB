@@ -30,7 +30,13 @@ io.on('connection', function (socket) {
 });
 
 
-/*
+
+
+//details.js
+var details = require('./app/details');
+
+
+/* look for changes
 
 r.table('company').changes().run()
 .then(function(cursor){
@@ -42,13 +48,10 @@ r.table('company').changes().run()
 
 */
 
-//details.js
-var details = require('./app/details');
 
 //route our app
 var router = require('./app/routes');
 app.use('/',router);
-
 
 //public folder
 app.use(express.static(__dirname + '/public'));

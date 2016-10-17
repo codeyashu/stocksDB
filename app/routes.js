@@ -8,9 +8,14 @@ var r = require('rethinkdbdash')({
   db: 'stocks'
 });
 
+//create router object
+var router = express.Router();
+
+//export router
+module.exports = router;
 
 //query module
-var query = require('./query')
+var query = require('./query');
 var app = require('../server');
 
 // middleware to populate clist & clen
@@ -24,22 +29,21 @@ app.use(function(req, res, next){
    });
 });
 
+/* Query to get company details
+
 query.companyList(function(err, data){
       if(err) {
          console.log(err);
       } else {
          console.log(data.clist[0].id);
-         console.dir(data.clist);
+        // console.dir(data.clist);
+         console.log(data.clist);
       }
 });
+*/
 
 
 
-//create router object
-var router = express.Router();
-
-//export router
-module.exports = router;
 
 //home page
 router.get('/', function(req, res) {

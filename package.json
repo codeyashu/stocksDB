@@ -13,6 +13,7 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-ejs-layouts": "^2.2.0",
+    "google-stocks": "^0.2.0",
     "nodemon": "^1.10.2",
     "path": "^0.12.7",
     "request": "^2.75.0",

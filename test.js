@@ -5,6 +5,8 @@ var r = require('rethinkdbdash')({
   db: 'stocks'
 });
 
+
+/*
 r.table('test').changes().run()
 .then(function(cursor){
     cursor.each(console.log);
@@ -13,4 +15,8 @@ r.table('test').changes().run()
     console.log(err);
 })
 
-//r.tableCreate('test123').run(function(err,conn))
+*/
+r.table('company').get(358464).run();
+
+var x = "13606";
+r.table('oldtable').get(parseInt(x)).update({name:"yashas"}).run();

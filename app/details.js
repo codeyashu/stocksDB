@@ -5,25 +5,21 @@ var r = require('rethinkdbdash')({
   host: 'localhost',
   db: 'stocks'
 });
-
+var googleStocks = require('google-stocks');
 
 //export details.js
 var exports = module.exports = {}
 
-//query to company table
-var len;
-var ctable = {};
-//query to get companies list 
-r.table('company').orderBy('name').run()
-  .then(function(response){
-     ctable = response;
-      //number of companies
-     len = Object.keys(ctable).length;
-  })
- .error(function(err){
-    console.log(err);
- })   
+googleStocks(['NASDAQ:AAPL','NASDAQ:MSFT','NASDAQ:FB','NYSE:F','NSE:MARUTI','NSE:TATAMOTORS'], function(error, data){
+  console.log(data);
+  for(var i = 0;i < 6;i ++){
+    r.table('company').get(parseInt(data[i].id)).update({quote:{lastTradeTime:data[i].lt, lastTradePrice:data[i].l_cur, change:data[i].c, changePercent:data[i].cp}}).run();
+  }
+})
 
+
+
+//------ OLD CODE------//
 
 /*
 //get stock quote in json
@@ -41,9 +37,7 @@ request({
           var stringquote = (quote.substring(4));
           console.log(objectquote)
           console.log(objectquote[2].t)
-          for(var i = 0; i < len; i++){
-            r.table('')
-          }
+          
         }  
 })
 */
