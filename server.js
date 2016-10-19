@@ -57,6 +57,6 @@ app.use('/',router);
 app.use(express.static(__dirname + '/public'));
 
 //start the server
-app.listen(3000, function () {
+app.listen(9000, function () {
   console.log('Server started!');
 });
