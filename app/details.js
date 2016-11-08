@@ -16,19 +16,8 @@ var exports = module.exports = {}
 var query = require('./query');
 var app = require('../server');
 
-/*// middleware to populate clist & clen
-app.use(function(req, res, next){
-   query.companyList(function(err, data){
-      if(!err) {
-        console.log(data.clist);
-         req.clist = data.clist;
-         req.clen = data.clen;
-      }
-      next();
-   });
-});
-*/
-
+fetch();
+/*
 query.companyList(function(err, data){
       if(err) {
          console.log(err);
@@ -59,7 +48,41 @@ query.companyList(function(err, data){
         }
       }
 });
+*/
+function fetch(){
+query.companyList(function(err, data){
+      if(err) {
+         console.log(err);
+      } 
+      else {
+        for(var i = 0; i < Object.keys(data.clist).length;  i++){
+           var comp = data.clist[i].exchange+ ':' +data.clist[i].ticker;
+           var cid = data.clist[i].id;
+           (function(_id) {
+               googleStocks([comp])
+               .then(function(data){
+                 console.log((data[0].lt));
+                 r.table('company').get(parseInt(_id)).
+                     update({quote:{lastTradeTime:data[0].lt,
+                         lastTradePrice:data[0].l_cur, change:data[0].c, 
+                             changePercent:data[0].cp}}).run()
+                 .then(function(results){
+                   console.log(results);
+                 })
+                 .catch(function(err){
+                   console.log(err);
+                 });
+               })
+               .catch(function(error){
+                 console.log(error);
+               });
+            })(cid);
+        }
+      }
+})
+};
 
+var intID=setInterval(fetch,100000);
 
 /* working codeeee
 query.companyList(function(err, data){
@@ -116,25 +139,16 @@ query.companyList(function(err, data){
 */
 
 
-
-
-
-          /* googleStocks([comp], function(error, data){
-             if(error) {
-               console.log(err);
-             } 
+ /* googleStocks([comp], function(error, data){
+     if(error) {
+     console.log(err);
+        } 
              else {
                console.log(data);
                r.table('company').get(parseInt(data.clist[i].id)).update({quote:{lastTradeTime:data.clist[i].lt, lastTradePrice:data.clist[i].l_cur, change:data.clist[i].c, changePercent:data.clist[i].cp}}).run();
              }
            })*/
         
-
-
-
-
-
-
 
 
 //------ OLD CODE------//

@@ -78,12 +78,14 @@ main{
     color: #e8e9eb
 }
 main .hero{
-    padding: 50px 30px;
+    padding: 100px 30px;
     text-align: center;
-     
 }
 main .hero h1{
     margin: 0;
+}
+main .hero p{
+    margin-top: 15px; 
 }
 main .moreinfo{
 text-align: center;
@@ -99,7 +101,7 @@ main .letsgo a{
     border-width:2px;
     border-radius: 3px;
     text-decoration: none;
-    color: white;
+    color: mediumseagreen;
     padding: 10px 15px;
     border-radius: 3px;
     transition: 0.5s ease all;

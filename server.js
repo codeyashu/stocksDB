@@ -48,7 +48,6 @@ r.table('company').changes().run()
 })
 
 
-
 //route our app
 var router = require('./app/routes');
 app.use('/',router);

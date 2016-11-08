@@ -30,24 +30,7 @@ app.use(function(req, res, next){
 });
 
 
-/* Query to get company details
-
-query.companyList(function(err, data){
-      if(err) {
-         console.log(err);
-      } else {
-         console.log(data.clist[0].id);
-        // console.dir(data.clist);
-         console.log(data.clist);
-      }
-});
-
-*/
-
-
-
-
-//home page
+//--home page--//
 router.get('/', function(req, res) {
     console.log('served homepage');
     res.render('pages/home');
@@ -69,6 +52,7 @@ router.get('/about', function(req,res){
     console.log('served about page');
     res.render('pages/about');
 });
+
 router.post('/about', function(req, res){
    name = req.body.name;
    console.log(name);
@@ -88,12 +72,10 @@ router.post('/about', function(req, res){
      res.render('pages/successmes',{
        name: req.body.name
    });
-        
 });
 
 
-//get quote page
-
+//--get quote page--//
 var selectedc;
 router.get('/quote', function(req, res) {
     console.log('served getquotes page')
@@ -112,6 +94,3 @@ router.post('/quote', function(req, res){
         i: selectedc
     });
 });
-
-
-
