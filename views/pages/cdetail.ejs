@@ -1,13 +1,59 @@
 <html lang="en">
 
-<!--detail-->
+<!--company detail-->
 <%- contentFor('cdetail') %>
 
-<div class="row companyname">
-yayaaaayayayayayayayayay
-<div>
+<cdetail>
+  <div class="container">
+
+    <div class="head">
+        
+    
+    </div>
+
+    <div class="main">
+
+      <div class="row upart">
+
+        <div class="cname col-md-6"><h1>  <%=clist[i].name %> <h1>  <h3>( <%=clist[i].description %> )<h3> </h1></div>
+          
+        <div class="col-md-offset-9 att b"> CEO </div>
+        <div class="col-md-offset-9 val "> <%=clist[i].ceo%> </div>
+           
+        <div class="col-md-offset-9 att b"> Headquarters </div>
+        <div class="col-md-offset-9 val "> <%=clist[i].headquarters%> </div>
+
+        <div class="col-md-3 att b"> Ticker </div>
+        <div class="col-md-3 att b"> Exchange </div>
+
+        <div class="col-md-offset-9 att b"> Country </div>
+
+        <div class="col-md-3 val "> <%=clist[i].ticker%> </div>
+        <div class="col-md-3 val "> <%=clist[i].exchange%> </div>
+        <div class="col-md-offset-9 val "> <%=clist[i].country%> </div>
+      </div>
+       
+        
+      <div class="row lpart">
+        <div class="col-md-3 ltp satt"> Last Trade Price </div>
+        <div class="col-md-3 ltt satt"> Last Trade Time </div>
+        <div class="col-md-3 c satt"> Change </div>
+        <div class="col-md-3 cp satt"> Change Percent </div>
+        <div class="col-md-3 ltp sval"> <%=clist[i].quote.lastTradePrice%> </div>
+        <div class="col-md-3 ltt sval"> <%=clist[i].quote.lastTradeTime%> </div>
+        <div class="col-md-3 c sval"> <%=clist[i].quote.change%> </div>
+        <div class="col-md-3 cp sval"> <%=clist[i].quote.changePercent%> </div>
+      </div>
+    
+    
+    </div>
+
+    <div class="tail">
 
 
-<div class="company details">
+    </div>
 
-<div>
+</div>
+
+
+</cdetail>

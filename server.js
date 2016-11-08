@@ -21,6 +21,7 @@ app.use(expressLayouts);
 app.use(bodyParser.urlencoded({extended: true}));
 
 
+/*
 //socket
 io.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
@@ -29,7 +30,7 @@ io.on('connection', function (socket) {
   });
 });
 
-
+*/
 
 
 //details.js
@@ -57,6 +58,6 @@ app.use('/',router);
 app.use(express.static(__dirname + '/public'));
 
 //start the server
-app.listen(9000, function () {
+app.listen(3000, function () {
   console.log('Server started!');
 });

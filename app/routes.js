@@ -29,6 +29,7 @@ app.use(function(req, res, next){
    });
 });
 
+
 /* Query to get company details
 
 query.companyList(function(err, data){
@@ -40,6 +41,7 @@ query.companyList(function(err, data){
          console.log(data.clist);
       }
 });
+
 */
 
 
@@ -67,6 +69,21 @@ router.get('/about', function(req,res){
     console.log('served about page');
     res.render('pages/about');
 });
+router.post('/about', function(req, res){
+   name = req.body.name;
+   console.log(name);
+   email = req.body.email;
+   console.log(email);
+   phone = req.body.phone;
+   console.log(phone);
+   message = req.body.message;
+   console.log(message);
+
+   res.render('pages/successmes',{
+       name: req.body.name
+   });
+        
+});
 
 
 //get quote page
@@ -85,6 +102,8 @@ router.post('/quote', function(req, res){
    console.log(selectedc);
 
     res.render('pages/cdetail',{
+        clist: req.clist,
+        i: selectedc
     });
 });
 

@@ -6,19 +6,21 @@
 <quote>
  
  <div class="row selectcompanytext">
-    <h3>select company</h3>
+    <h2>Select Company</h2>
 </div>
 
 
  <div class="row selectcompany">
+  <div class="col-md-6 col-md-offset-3">
    <form action="/quote" method="POST">
      <div class="radio">
         <%for(var i = 0; i<x; i++) {%>
-          <label><input type="radio" name="company" value= <%= clist[i].id %> > <%= clist[i].name  %> </label>
+          <label><input type="radio" name="company" value= <%= i %> > <%= clist[i].name  %> </label>
         <% } %>
      </div>
-     <button type="submit" class="btn btn-success">submit</button>
+     <button type="submit" class="btn btn-success">SUBMIT</button>
   </form>    
+  </div>
 </div>
 
 </quote>

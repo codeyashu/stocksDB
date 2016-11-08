@@ -2,6 +2,11 @@
 *{
     box-sizing: border-box;
 }
+/*
+*{
+    border: 1px solid red;
+}
+*/
 
 
 body{
@@ -14,6 +19,7 @@ body{
 /*--FULL CSS--*/
 
 /*--header*/
+
 header{
     padding: 20px 30px;
 }
@@ -25,13 +31,11 @@ header #site-name{
     width: 49%;
     padding: 10px 15px;
 }
-
 header #main-nav{
     display: inline-block;
     width: 49%;
     text-align: right;
 }
-
 header #main-nav ul{
      list-style: none;
      padding: 0;
@@ -81,11 +85,9 @@ main .hero{
 main .hero h1{
     margin: 0;
 }
-
 main .moreinfo{
 text-align: center;
 }
-
 main .letsgo{
     text-align: center;
     padding: 20px 30px;
@@ -110,25 +112,32 @@ main .letsgo a:hover{
 /*--quotes*/
 
 quote .selectcompanytext{
-    color: white;
+    margin-top: 30px; 
+    color: wheat;
+    text-align: center;
 }
 label{
     color: white;
 }
-
-
+quote .selectcompany{
+    font-size: 18pt;
+    padding-top:10px;
+    color: white;
+}
+button{
+    position: absolute;
+    left: 47%;
+}
 
 /*--companies--*/
+
 companylist{
     color: #f1e0c5;
 }
-
-
 companylist .head{
     text-align: center;
     padding: 30px 30px;
 }
-
 companylist .list{
     border: 2px solid wheat;
     margin-left: 35%;
@@ -140,8 +149,6 @@ companylist .list ul{
     padding: 0;
     list-style: none;
 }
-
-
 companylist .tail{
     text-align: center;
     padding: 30px 30px;
@@ -149,9 +156,92 @@ companylist .tail{
 }
 
 
+ /*--about--*/
 
-
-/*--about--*/
 about{
-    font-size: 90px;
-    }
+    text-align: center;  
+}
+about .messages{
+    color: wheat;
+}
+about .controls{
+    margin-top: 10px;
+} 
+about .credits{
+    margin-top: 50px;
+    font-weight: bold;
+    color: wheat;
+}
+about .credits ul{
+    list-style: none;
+    padding: 0;
+}
+about .credits .list{
+   color: whitesmoke;
+}
+
+
+/*---success----*/
+success .message{
+    text-align: center;
+    padding-top: 200px;
+    color: mediumseagreen; 
+}
+success .credits{
+    text-align: center;
+    margin-top: 270px;
+    font-weight: bold;
+    color: wheat;
+}
+success .credits ul{
+    list-style: none;
+    padding: 0;
+}
+success .credits .list{
+   color: whitesmoke;
+}
+
+
+/*--company details--*/
+cdetail{
+    color: oldlace;
+}
+cdetail .main{
+    margin-top: 20px;
+}
+
+cdetail .main .cname{
+    color: darkorange;
+}
+
+cdetail .main .upart{
+ font-size: 15pt;
+
+}
+cdetail .main .upart .att{
+    border: 1px double wheat;
+    
+}
+cdetail .main .upart .val{
+    border: 1px double wheat;
+    color: lightblue;
+        font-size: 20pt;
+
+}
+cdetail .main .upart .b{
+  margin-top: 10px;
+}
+
+cdetail .main .lpart{
+    padding-top: 15px;
+    font-size: 15pt;
+    
+}
+cdetail .main .lpart .satt{
+    border: 1px double wheat;
+}
+cdetail .main .lpart .sval{
+    border: 1px double wheat;
+    color: lightblue;
+    font-size: 20pt;    
+}
