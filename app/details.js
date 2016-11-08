@@ -29,6 +29,37 @@ app.use(function(req, res, next){
 });
 */
 
+query.companyList(function(err, data){
+      if(err) {
+         console.log(err);
+      } 
+      else {
+        for(var i = 0; i < Object.keys(data.clist).length;  i++){
+           var comp = data.clist[i].exchange+ ':' +data.clist[i].ticker;
+           var cid = data.clist[i].id;
+           (function(_id) {
+               googleStocks([comp])
+               .then(function(data){
+                 console.log((data[0].lt));
+                 r.table('company').get(parseInt(_id)).
+                     update({quote:{lastTradeTime:data[0].lt,
+                         lastTradePrice:data[0].l_cur, change:data[0].c, 
+                             changePercent:data[0].cp}}).run()
+                 .then(function(results){
+                   console.log(results);
+                 })
+                 .catch(function(err){
+                   console.log(err);
+                 });
+               })
+               .catch(function(error){
+                 console.log(error);
+               });
+            })(cid);
+        }
+      }
+});
+
 
 /* working codeeee
 query.companyList(function(err, data){
@@ -52,7 +83,7 @@ googleStocks(['NASDAQ:AAPL','NASDAQ:MSFT','NASDAQ:FB','NYSE:F','NSE:MARUTI','NSE
 
 
 ////test
-
+/*
 query.companyList(function(err, data){
       if(err) {
          console.log(err);
@@ -82,6 +113,7 @@ query.companyList(function(err, data){
         }
       }
 });
+*/
 
 
 

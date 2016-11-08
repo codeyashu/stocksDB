@@ -78,8 +78,14 @@ router.post('/about', function(req, res){
    console.log(phone);
    message = req.body.message;
    console.log(message);
-
-   res.render('pages/successmes',{
+   r.table('feedback').insert({name:req.body.name,email:req.body.email,phone: req.body.phone,message:req.body.message,time:r.now().inTimezone('+05:30')}).run()
+   .then(function(results){
+       console.log(results);
+   })
+   .catch(function(err){
+       console.log(err);
+   });
+     res.render('pages/successmes',{
        name: req.body.name
    });
         

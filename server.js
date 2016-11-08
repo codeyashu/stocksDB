@@ -37,7 +37,7 @@ io.on('connection', function (socket) {
 var details = require('./app/details');
 
 
-/* look for changes
+//--- look for changes ---//
 
 r.table('company').changes().run()
 .then(function(cursor){
@@ -47,7 +47,6 @@ r.table('company').changes().run()
     console.log(err);
 })
 
-*/
 
 
 //route our app
