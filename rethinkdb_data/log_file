@@ -629,3 +629,8 @@
 2016-11-08T20:17:15.760058619 3526.142640s info: Table cc5dcc6a-7ad6-434d-831a-75b06b9f4f9e: Added replica on this server.
 2016-11-08T20:17:15.760093773 3526.142675s info: Table cc5dcc6a-7ad6-434d-831a-75b06b9f4f9e: Starting a new Raft election for term 1.
 2016-11-08T20:17:15.767068656 3526.149650s info: Table cc5dcc6a-7ad6-434d-831a-75b06b9f4f9e: This server is Raft leader for term 1. Latest log index is 0.
+2016-11-09T01:43:17.099673560 23087.482256s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2016-11-09T01:43:17.100052666 23087.482635s notice: Shutting down client connections...
+2016-11-09T01:43:17.100362706 23087.482945s notice: All client connections closed.
+2016-11-09T01:43:17.100375096 23087.482956s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-11-09T01:43:17.126894472 23087.509477s notice: Storage engine shut down.
